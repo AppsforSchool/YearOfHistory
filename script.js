@@ -140,8 +140,10 @@ document.addEventListener("DOMContentLoaded", () => {
   auth.onAuthStateChanged(async (user) => {
     if (user) {
       window.location.href = '/app.html';
+      loginContainer.classList.add("hidden");
     } else {
       loadingOverlay.classList.add("hidden");
+      loginContainer.classList.remove("hidden");
     }
   });
 });
